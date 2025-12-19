@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Menu, theme } from "antd";
+import { Layout, Menu, theme, FloatButton } from "antd"; // 1. Import FloatButton
 import { useNavigate, useLocation, Outlet } from "react-router-dom";
 import {
   HomeOutlined,
@@ -9,6 +9,7 @@ import {
   SafetyCertificateOutlined,
   EnvironmentOutlined,
   SmileOutlined,
+  VerticalAlignTopOutlined,
 } from "@ant-design/icons";
 
 const { Header, Content, Footer } = Layout;
@@ -45,14 +46,14 @@ const MainLayout: React.FC = () => {
           zIndex: 100,
           width: "100%",
           padding: "0 24px",
-          background: "rgba(255, 255, 255, 0.95)", // Glassmorphism effect
+          background: "rgba(255, 255, 255, 0.95)",
           backdropFilter: "blur(10px)",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.06)", // Soft shadow
+          boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
         }}
       >
         <div
           style={{
-            color: "#2a9d8f", // Teal brand color
+            color: "#2a9d8f",
             fontWeight: 800,
             fontSize: "1.5rem",
             marginRight: "2rem",
@@ -82,7 +83,6 @@ const MainLayout: React.FC = () => {
       </Header>
 
       <Content style={{ padding: "32px 24px" }}>
-        {/* Container to limit width for better readability (Cozy feel) */}
         <div
           style={{
             maxWidth: 1100,
@@ -105,6 +105,14 @@ const MainLayout: React.FC = () => {
         <SmileOutlined style={{ color: "#2a9d8f" }} /> Bipolar Info ©
         {new Date().getFullYear()} — Vì sức khỏe tâm thần cộng đồng.
       </Footer>
+
+      {/* 3. Thêm nút Back To Top tại đây */}
+      <FloatButton.BackTop
+        type="primary"
+        tooltip="Lên đầu trang"
+        icon={<VerticalAlignTopOutlined />}
+        style={{ right: 24, bottom: 24 }}
+      />
     </Layout>
   );
 };
