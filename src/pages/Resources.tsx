@@ -79,7 +79,7 @@ const Resources: React.FC = () => {
                   type="text"
                   icon={<PhoneFilled />}
                   style={{ color: "#2a9d8f" }}
-                  href={`tel:${item.phone}`}
+                  href={`tel:${item.phone.replace(/\s/g, "")}`}
                 >
                   Gọi điện
                 </Button>,
