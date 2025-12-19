@@ -15,6 +15,7 @@ const maniaData = [
   "Ngủ rất ít (2-3 tiếng) nhưng không thấy mệt.",
   "Tự tin thái quá, cảm thấy mình là người đặc biệt.",
   "Tiêu xài hoang phí hoặc lái xe mạo hiểm.",
+  "Dễ bị phân tâm, chuyển nhanh từ việc này sang việc khác.",
 ];
 
 const depressionData = [
@@ -23,6 +24,7 @@ const depressionData = [
   "Ăn quá nhiều hoặc chán ăn bất thường.",
   "Mệt mỏi triền miên, không muốn bước xuống giường.",
   "Suy nghĩ tiêu cực về bản thân hoặc sự sống.",
+  "Giảm khả năng tư duy, khó tập trung.",
 ];
 
 const Symptoms: React.FC = () => {
